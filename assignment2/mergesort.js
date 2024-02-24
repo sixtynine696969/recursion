@@ -6,20 +6,21 @@ function mergesort(arr) {
     let finalArray = [];
 
     while (arr1.length && arr2.length) {
-        if (arr1[0] <= arr2[0]) {
-            finalArray.push(arr1.shift())
-        } else if (arr2[0] <= arr1[0]){
-            finalArray.push(arr2.shift())
-        }
+        // if (arr1[0] <= arr2[0]) {
+        //     finalArray.push(arr1.shift())
+        // } else if (arr2[0] <= arr1[0]){
+        //     finalArray.push(arr2.shift())
+        // }
+        (arr1[0] <= arr2[0]) ? finalArray.push(arr1.shift()) : finalArray.push(arr2.shift())
     }
-
-    (arr1.length) ? finalArray.push(...arr1) : finalArray.push(...arr2);
 
     // if (!arr1.length) {
     //     finalArray.push(...arr2)
     // } else if (!arr2.length) {
     //     finalArray.push(...arr1);
     // }
+
+    (arr1.length) ? finalArray.push(...arr1) : finalArray.push(...arr2);
 
     return finalArray;
 }
