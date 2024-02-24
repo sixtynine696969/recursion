@@ -6,11 +6,13 @@ function mergesort(arr) {
     let finalArray = [];
 
     while (arr1.length && arr2.length) {
+
         // if (arr1[0] <= arr2[0]) {
         //     finalArray.push(arr1.shift())
         // } else if (arr2[0] <= arr1[0]){
         //     finalArray.push(arr2.shift())
         // }
+        
         (arr1[0] <= arr2[0]) ? finalArray.push(arr1.shift()) : finalArray.push(arr2.shift())
     }
 
