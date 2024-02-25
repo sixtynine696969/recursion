@@ -1,5 +1,5 @@
 function mergesort(arr) {
-    if (arr.length == 1) return arr;
+    if (arr.length < 2) return arr;
 
     let arr1 = mergesort(arr.splice(0, arr.length/2))
     let arr2 = mergesort(arr);
